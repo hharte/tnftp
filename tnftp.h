@@ -174,10 +174,10 @@ struct pollfd {
 # include <paths.h>
 #endif
 #if !defined(_PATH_BSHELL)
-# define _PATH_BSHELL	"/bin/sh"
+# define _PATH_BSHELL	"/data/data/com.magicandroidapps.bettertermpro/bin/bash"
 #endif
 #if !defined(_PATH_TMP)
-# define _PATH_TMP	"/tmp/"
+# define _PATH_TMP	"/data/data/com.magicandroidapps.bettertermpro/tmp/"
 #endif
 
 typedef struct _stringlist {
@@ -501,6 +501,8 @@ int utimes(const char *, const struct timeval *);
 #define getipnodebyname	Rgetipnodebyname
 #endif /* defined(USE_SOCKS) */
 
+//hharte
+#include "libnetbsd/arpa_ftp.h"
 
 /*
  * Compatibility for stuff in NetBSD <sys/cdefs.h>

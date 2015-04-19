@@ -463,8 +463,8 @@ main(int volatile argc, char **volatile argv)
 	if (pw == NULL)
 		pw = getpwuid(getuid());
 	if (pw != NULL) {
-		if (localhome == NULL && !EMPTYSTRING(pw->pw_dir))
-			localhome = ftp_strdup(pw->pw_dir);
+		if (localhome == NULL && !EMPTYSTRING(getenv("HOME")))
+			localhome = ftp_strdup(getenv("HOME"));
 		localname = ftp_strdup(pw->pw_name);
 		anonuser = localname;
 	}

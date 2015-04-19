@@ -49,10 +49,10 @@ __RCSID(" NetBSD: ssl.c,v 1.2 2012/12/24 22:12:28 christos Exp  ");
 #include <sys/select.h>
 #include <sys/uio.h>
 
-#include <netinet/tcp.h>
 #include <netinet/in.h>
 #endif	/* tnftp */
 
+#include <netinet/tcp.h>
 #include <openssl/crypto.h>
 #include <openssl/x509.h>
 #include <openssl/pem.h>

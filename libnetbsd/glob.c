@@ -423,7 +423,7 @@ globtilde(const Char *pattern, Char *patbuf, size_t patsize, glob_t *pglob)
 #endif
 				return pattern;
 			else
-				h = pwd->pw_dir;
+				h = getenv("HOME");
 		}
 	}
 	else {
@@ -438,7 +438,7 @@ globtilde(const Char *pattern, Char *patbuf, size_t patsize, glob_t *pglob)
 #endif
 			return pattern;
 		else
-			h = pwd->pw_dir;
+			h = getenv("HOME");
 	}
 
 	/* Copy the home directory */

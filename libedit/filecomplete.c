@@ -108,10 +108,10 @@ tilde_expand(char *txt)
 	/* first slash */
 	txt += len;
 
-	temp = malloc(strlen(pass->pw_dir) + 1 + strlen(txt) + 1);
+	temp = malloc(strlen(getenv("HOME")) + 1 + strlen(txt) + 1);
 	if (temp == NULL)
 		return NULL;
-	(void)sprintf(temp, "%s/%s", pass->pw_dir, txt);
+	(void)sprintf(temp, "%s/%s", getenv("HOME"), txt);
 
 	return (temp);
 }
